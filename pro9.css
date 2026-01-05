@@ -1,0 +1,613 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  background: linear-gradient(#0057A3 60%, #00BFAE);
+}
+
+.parent {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px;
+  padding: 20px;
+  background-color: #ffffff90;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 20px;
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  line-height: 40px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.header p {
+  font-size: 37px;
+  letter-spacing: 12px;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px #00BFAE;
+  transition: scale 1s, color 0.8s, text-shadow 1s, letter-spacing 0.5s;
+}
+
+.header p:hover {
+  scale: 1.2;
+  color: #00BFAE;
+  text-shadow: 2px 2px 5px #ffffff;
+  letter-spacing: 17px;
+}
+
+.header h1 {
+  margin-right: 15px;
+  font-size: 42px;
+  letter-spacing: 2px;
+  color: #00BFAE;
+  text-shadow: 2px 2px 5px #ffffff;
+  transition: scale 1s, color 0.8s, text-shadow 1s, letter-spacing 0.5s;
+}
+
+.header h1:hover {
+  scale: 1.2;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px #00BFAE;
+  letter-spacing: 5px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.inputs,.search {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #ffffff80;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 5px #00BFAE;
+  transition: scale 1s;
+  animation: chsh 5s infinite alternate;
+}
+
+@keyframes chsh {
+  0% {
+    box-shadow: 0px 0px 20px 5px #00BFAE;
+  }
+  25% {
+    box-shadow: 0px 0px 20px 5px #004f9b;
+  }
+  50% {
+    box-shadow: 0px 0px 20px 5px #00C1B1;
+  }
+  75% {
+    box-shadow: 0px 0px 20px 5px #005E6B;
+  }
+  100% {
+    box-shadow: 0px 0px 20px 5px #a4a4a4;
+  }
+}
+
+.inputs:hover,.search:hover {
+  scale: 1.02;
+}
+
+.inputs input,#search {
+  padding: 10px;
+  border-radius: 7px;
+  border: none;
+  width: 38%;
+  margin-top: 10px;
+  box-shadow: 0px 0px 20px 2px #004f9b;
+  transition: box-shadow 0.5s, scale 0.3s, letter-spacing 1s;
+}
+
+.inputs input:hover,#search:hover {
+  letter-spacing: 3px;
+  scale: 1.05;
+  box-shadow: 0px 0px 25px 5px #00BFAE;
+}
+
+#price {
+  width: 70%;
+}
+
+.exp {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.exp label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #6f6d6d;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 2px #004f9b;
+  margin-top: 10px;
+  transition: letter-spacing 0.3s, box-shadow 1s, scale 0.7s, color 0.8s;
+  font-size: 13px;
+}
+
+.exp label:hover {
+  scale: 1.05;
+  box-shadow: 0px 0px 25px 5px #00BFAE;
+  color: #00BFAE;
+  letter-spacing: 2px;
+}
+
+#submit,.search button,#btnDeleteAll {
+  width: 88%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px 2px #004f9b;
+  transition: letter-spacing 0.4s, box-shadow 0.7s, scale 0.4s, background-color 0.8s, color 0.9s, border 1.4s;
+}
+
+#submit:hover,.search button:hover,#btnDeleteAll:hover {
+  scale: 1.09;
+  letter-spacing: 5px;
+  box-shadow: 0px 0px 25px 5px #00BFAE;
+  background-color: #00BFAE;
+  color: white;
+  border: 2px solid white;
+}
+
+#search {
+  width: 80%;
+}
+
+.search button {
+  width: 38%;
+}
+
+.search button:hover {
+  background-color: #004f9b;
+}
+
+.table {
+  width: 95%;
+  background-color: #0057A3;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px 5px #00BFAE;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-spacing: 10px;
+}
+
+th {
+  background-color: #ffffff;
+  padding: 13px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 5px #004f9b;
+  transition: scale 0.2s, letter-spacing 0.4s;
+}
+
+th:hover {
+  scale: 1.1;
+  letter-spacing: 3px;
+  animation: chsh 1.5s infinite alternate;
+}
+
+td {
+  color: black;
+  padding: 10px;
+  background-color: #a4a4a4;
+  text-transform: uppercase;
+  transition: border-radius 0.4s, color 0.8s, scale 0.2s, background-color 0.8s, box-shadow 0.4s;
+}
+
+td:hover {
+  color: #045dc4;
+  scale: 1.06;
+  box-shadow: 0px 0px 20px 5px #ffffff;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+#update,#delete {
+  padding: 8px;
+  width: 100%;
+  background-color: #090;
+  border-radius: 5px;
+  transition: 1s;
+}
+
+#update:hover,#delete:hover {
+  scale: 1.04;
+  color: #090;
+  box-shadow: 0px 0px 20px 5px #090;
+  background-color: white;
+}
+
+#delete {
+  background-color: red;
+}
+
+#delete:hover {
+  color: red;
+  box-shadow: 0px 0px 20px 5px red;
+  background-color: white;
+}
+
+#scroll {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  position: fixed;
+  z-index: 20;
+  bottom: 10px;
+  right: 10px;
+  background-color: #00C1B1;
+  transition: all 0.4s ease;
+}
+
+#scroll:hover {
+  bottom: 12px;
+  right: 12px;
+  background-color: #ffffff;
+  color: black;
+  scale: 1.1;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#scroll:before {
+  content: "↑";
+  font-size: 24px;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+#scroll:hover:before {
+  color: #00BFAE;
+}
+
+#deleteAll {
+  width: 90%;
+}
+
+#btnDeleteAll {
+  width: 100%;
+}
+
+#btnDeleteAll:hover {
+  background-color: red;
+}
+
+.class {
+  display: none;
+}
+.info{
+  display: flex;
+  width: 40%;
+  margin: auto;
+  flex-wrap: wrap;
+
+}
+.info p{
+  text-align: center;
+  color: #000;
+  font-size: medium;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: 1s;
+}
+.info p:hover{
+  scale: 1.2;
+}
+.info a{
+  text-decoration: none;
+  color: #000;
+  margin: auto;
+  transition: color 1s , letter-spacing 1.2s , scale 0.4s;
+}
+.info a:hover {
+  text-decoration: underline;
+  color: #004f9b;
+  letter-spacing: 2px;
+  scale: 1.1;
+}
+
+
+@media screen and (min-width:700px) and (max-width: 950px){
+  
+  #submit , .search button{
+    transition:letter-spacing 0.4s , box-shadow 0.7s , scale 0.4s , background-color 0.8s , color 0.9s, border 1.4s;
+  }
+  #submit:hover , .search button:hover{
+    letter-spacing: 1px;
+  }
+  
+  
+  .table{
+    width: 100%;
+    padding: 5px;
+    background-color: #0054998b;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 5px #00BFAE;
+  }  
+  table{
+    border-spacing: 5px;
+    width: 100%;
+    text-align: center;
+  }
+  th{
+    padding: 5px;
+    background-color:#ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 5px #004f9b;
+    transition: scale 0.2s , letter-spacing 0.4s;
+  }
+  th:hover{
+    scale: 1.04;
+    letter-spacing: 2px;
+    animation: chsh 1.5s infinite alternate;
+  }
+  td{
+    padding: 5px;
+    color: black;
+    background-color:  #a4a4a4;
+    transition:border-radius 0.4s ,color 0.8s, scale 0.2s , background-color 0.8s ,box-shadow 0.4s;
+  }
+  td:hover{
+    scale: 1.03;
+    color:#045dc4;
+    box-shadow: 0px 0px 20px 5px #ffffff;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  #update , #delete{
+    padding: 3px;
+    background-color: #090;
+    border-radius: 5px;
+  }
+  #update:hover , #delete:hover{
+    color: #090;
+    box-shadow: 0px 0px 20px 5px #090;
+    background-color: white;
+}
+#delete{
+    background-color: red;
+}
+#delete:hover{
+    color: red;
+    box-shadow: 0px 0px 20px 5px red;
+    background-color: white;
+}
+
+  }
+@media screen and (min-width:564px) and (max-width: 700px){
+    
+  #submit , .search button{
+    transition:letter-spacing 0.4s , box-shadow 0.7s , scale 0.4s , background-color 0.8s , color 0.9s, border 1.4s;
+  }
+  #submit:hover , .search button:hover{
+    letter-spacing: 1px;
+  }
+  
+  
+  .table{
+      width: 100%;
+      padding: 1px;
+      background-color: #0054998b;
+      border-radius: 15px;
+      box-shadow: 0px 0px 20px 5px #00BFAE;
+    }  
+    table{
+      border-spacing: 1px;
+      width: 100%;
+      text-align: center;
+    }
+    th{
+      padding: 1px;
+      background-color:#ffffff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 20px 5px #004f9b;
+      transition: scale 0.2s , letter-spacing 0.4s;
+    }
+    th:hover{
+      scale: 1.02;
+      letter-spacing: 1px;
+      animation: chsh 1.5s infinite alternate;
+    }
+    td{
+      padding: 1px;
+      color: black;
+      background-color:  #a4a4a4;
+      transition:border-radius 0.4s ,color 0.8s, scale 0.2s , background-color 0.8s ,box-shadow 0.4s;
+    }
+    td:hover{
+      scale: 1.01;
+      color:#045dc4;
+      box-shadow: 0px 0px 20px 5px #ffffff;
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
+    #update , #delete{
+      padding: 1px;
+      background-color: #090;
+      border-radius: 5px;
+    }
+    #update:hover , #delete:hover{
+      color: #090;
+      box-shadow: 0px 0px 20px 5px #090;
+      background-color: white;
+  }
+  #delete{
+      background-color: red;
+  }
+  #delete:hover{
+      color: red;
+      box-shadow: 0px 0px 20px 5px red;
+      background-color: white;
+  }
+  
+  }
+@media screen and (min-width:325px) and (max-width:564px){
+
+  #submit , .search button{
+    transition:letter-spacing 0.4s , box-shadow 0.7s , scale 0.4s , background-color 0.8s , color 0.9s, border 1.4s;
+  }
+  #submit:hover , .search button:hover{
+    letter-spacing: 1px;
+  }
+  
+
+    .table{
+      width: 100%;
+      padding: 1px;
+      background-color: #0054998b;
+      border-radius: 15px;
+      box-shadow: 0px 0px 20px 5px #00BFAE;
+      overflow: auto;
+    }  
+    table{
+      border-spacing: 1px;
+      width: 100%;
+      text-align: center;
+    }
+    th{
+      padding: 1px;
+      background-color:#ffffff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 20px 5px #004f9b;
+      transition: scale 0.2s , letter-spacing 0.4s;
+    }
+    th:hover{
+      scale: 1.02;
+      letter-spacing: 1px;
+      animation: chsh 1.5s infinite alternate;
+    }
+    td{
+      padding: 1px;
+      color: black;
+      background-color:  #a4a4a4;
+      transition:border-radius 0.4s ,color 0.8s, scale 0.2s , background-color 0.8s ,box-shadow 0.4s;
+    }
+    td:hover{
+      scale: 1.01;
+      color:#045dc4;
+      box-shadow: 0px 0px 20px 5px #ffffff;
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
+    #update , #delete{
+      padding: 1px;
+      background-color: #090;
+      border-radius: 5px;
+    }
+    #update:hover , #delete:hover{
+      color: #090;
+      box-shadow: 0px 0px 20px 5px #090;
+      background-color: white;
+  }
+  #delete{
+      background-color: red;
+  }
+  #delete:hover{
+      color: red;
+      box-shadow: 0px 0px 20px 5px red;
+      background-color: white;
+  }
+  
+  }
+@media screen and (max-width:325px){
+
+    .inputs input , #search{
+        width: 100%;
+    }
+
+
+    .table{
+      width: 100%;
+      padding: 1px;
+      background-color: #0054998b;
+      border-radius: 15px;
+      box-shadow: 0px 0px 20px 5px #00BFAE;
+      overflow: auto;
+    }  
+    table{
+      border-spacing: 1px;
+      width: 100%;
+      text-align: center;
+    }
+    th{
+      padding: 1px;
+      background-color:#ffffff;
+      border-radius: 5px;
+      transition: scale 0.2s , letter-spacing 0.4s;
+    }
+    th:hover{
+      scale: 1.02;
+      letter-spacing: 1px;
+      animation: chsh 1.5s infinite alternate;
+    }
+    td{
+      padding: 1px;
+      color: black;
+      background-color:  #a4a4a4;
+      transition:border-radius 0.4s ,color 0.8s, scale 0.2s , background-color 0.8s ,box-shadow 0.4s;
+    }
+    td:hover{
+      scale: 1.01;
+      color:#045dc4;
+      box-shadow: 0px 0px 20px 5px #ffffff;
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
+    #update , #delete{
+      padding: 1px;
+      background-color: #090;
+      border-radius: 5px;
+    }
+    #update:hover , #delete:hover{
+      color: #090;
+      box-shadow: 0px 0px 20px 5px #090;
+      background-color: white;
+  }
+  #delete{
+      background-color: red;
+  }
+  #delete:hover{
+      color: red;
+      box-shadow: 0px 0px 20px 5px red;
+      background-color: white;
+  }
+  
+#submit , .search button{
+  transition:letter-spacing 0.4s , box-shadow 0.7s , scale 0.4s , background-color 0.8s , color 0.9s, border 1.4s;
+}
+#submit:hover , .search button:hover{
+  letter-spacing: 1px;
+}
+
+  }
